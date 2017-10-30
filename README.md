@@ -14,3 +14,21 @@ Boilerplate for React apps
 * `npm run format` - format code style using **prettier**
 * Styles use **sass** preprocessor
 * For testing used Jest and Enzyme stack.
+
+###Branch transform-class-properties
+
+transform-class-properties (stage-2) plugin added
+
+```js
+class App extends React.Component {
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+  };
+  state = {
+    hello: 'hi',
+  };
+  render() {
+    return <h1 className="app__element">{this.state.hello} - {this.props.text}</h1>;
+  }
+}
+```
