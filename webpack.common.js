@@ -22,7 +22,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
-      title: 'React template',
       template: './index.ejs',
       filename: './index.html',
       chunks: ['main'],
