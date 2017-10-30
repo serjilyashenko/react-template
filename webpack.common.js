@@ -47,14 +47,18 @@ module.exports = {
               ['env', {
                 module: false
               }]
-            ]
+            ],
+            "plugins": [
+              "react-hot-loader/babel",
+              "transform-class-properties"
+            ],
           }
         }
       },
       {
         test: /\.scss$/,
         use: [
-           "style-loader",
+          "style-loader",
           {
             loader: "css-loader",
             options: {

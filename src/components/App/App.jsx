@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const App = (props) => <h1 className="app__element">{props.text}</h1>;
+class App extends React.Component {
 
-App.propTypes = {
-  text: PropTypes.string.isRequired,
-};
+  static propTypes = {
+    text: PropTypes.string.isRequired,
+  };
+
+  state = {
+    hello: 'hi',
+  };
+
+  render() {
+    return <h1 className="app__element">{this.state.hello} - {this.props.text}</h1>;
+  }
+}
 
 export default App;
