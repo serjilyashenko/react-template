@@ -10,14 +10,14 @@ class App extends React.Component {
   };
 
   state = {
-    hello: 'hi',
+    world: 'hi',
   };
 
   render() {
     return (
       <div>
         <h1 className="app__element">
-          {this.props.text}
+          {this.props.text} {this.state.world}
           <img src={svgTest} alt="svg-test" />
         </h1>
         <img src={pngTest} alt="png-test"/>
