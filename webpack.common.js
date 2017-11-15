@@ -57,13 +57,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: true
-            }
-          },
-          'autoprefixer-loader',
+          'postcss-loader',
           'sass-loader'
         ]
       }
