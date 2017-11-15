@@ -15,7 +15,7 @@ Boilerplate for React apps
 * Styles use **sass** preprocessor
 * For testing used Jest and Enzyme stack.
 
-###Branch transform-class-properties
+###Branch `transform-class-properties`
 
 transform-class-properties (stage-2) plugin added
 
@@ -32,3 +32,7 @@ class App extends React.Component {
   }
 }
 ```
+
+###Branch `post-css`
+
+Used PostCSS processor with plugins: 'postcss-import', 'postcss-cssnext' and cssnano.
