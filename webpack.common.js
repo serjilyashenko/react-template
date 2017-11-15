@@ -11,7 +11,7 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx', '.json']
   },
   stats: {
@@ -22,18 +22,19 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
+      title: 'React template',
       template: './index.ejs',
       filename: './index.html',
-      chunks: ['main'],
+      chunks: ['main']
     })
   ],
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader'
       },
       {
         test: /\.jsx?$/,
@@ -43,31 +44,46 @@ module.exports = {
           options: {
             presets: [
               'react',
-              ['env', {
-                module: false
-              }]
+              [
+                'env',
+                {
+                  module: false
+                }
+              ]
             ],
-            "plugins": [
+            plugins: [
               "react-hot-loader/babel",
+              "babel-plugin-transform-object-rest-spread",
               "transform-class-properties"
             ],
           }
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               minimize: true
             }
           },
-          "autoprefixer-loader",
-          "sass-loader"
+          'autoprefixer-loader',
+          'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      },
     ]
   }
 };

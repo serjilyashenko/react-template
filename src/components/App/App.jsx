@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import svgTest from './svg-test.svg';
+import pngTest from './png-test.png';
 
 class App extends React.Component {
 
@@ -12,7 +14,15 @@ class App extends React.Component {
   };
 
   render() {
-    return <h1 className="app__element">{this.state.hello} - {this.props.text}</h1>;
+    return (
+      <div>
+        <h1 className="app__element">
+          {this.props.text}
+          <img src={svgTest} alt="svg-test" />
+        </h1>
+        <img src={pngTest} alt="png-test"/>
+      </div>
+    );
   }
 }
 

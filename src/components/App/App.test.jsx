@@ -16,11 +16,9 @@ const setup = propOverriders => {
 
 describe('components', () => {
   describe('App', () => {
-
     it('should render container', () => {
       const { wrapper } = setup();
       expect(wrapper.find('.test-class_mod2')).toHaveLength(1);
     });
-
   });
 });
