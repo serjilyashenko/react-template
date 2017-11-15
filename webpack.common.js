@@ -49,18 +49,33 @@ module.exports = {
                   module: false
                 }
               ]
-            ]
+            ],
+            plugins: [
+              "react-hot-loader/babel",
+              "babel-plugin-transform-object-rest-spread"
+            ],
           }
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           'style-loader',
           'postcss-loader',
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      },
     ]
   }
 };
