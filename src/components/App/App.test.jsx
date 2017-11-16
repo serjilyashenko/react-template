@@ -5,9 +5,9 @@ import App from './App';
 const setup = propOverriders => {
   const props = Object.assign(
     {
-      text: 'hello'
+      text: 'hello',
     },
-    propOverriders
+    propOverriders,
   );
   const wrapper = mount(<App {...props} />);
 
