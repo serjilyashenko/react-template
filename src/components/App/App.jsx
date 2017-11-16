@@ -9,12 +9,12 @@ const App = props => (
       {props.text}
       <img src={svgTest} alt="svg-test" />
     </h1>
-    <img src={pngTest} alt="png-test"/>
+    <img src={pngTest} alt="png-test" />
   </div>
 );
 
 App.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default App;
