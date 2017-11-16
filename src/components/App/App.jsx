@@ -4,7 +4,6 @@ import svgTest from './svg-test.svg';
 import pngTest from './png-test.png';
 
 class App extends React.Component {
-
   static propTypes = {
     text: PropTypes.string.isRequired,
   };
@@ -20,7 +19,7 @@ class App extends React.Component {
           {this.props.text} {this.state.world}
           <img src={svgTest} alt="svg-test" />
         </h1>
-        <img src={pngTest} alt="png-test"/>
+        <img src={pngTest} alt="png-test" />
       </div>
     );
   }
