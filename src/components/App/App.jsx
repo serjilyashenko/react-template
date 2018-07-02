@@ -13,6 +13,10 @@ class App extends React.Component {
   };
 
   render() {
+    /* eslint-disable */
+    console.log('dev mode started');
+    /* eslint-enable */
+
     return (
       <div>
         <h1 className="app__element">
